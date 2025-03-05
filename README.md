@@ -11,9 +11,9 @@ npm install -g @angular/cli
 ## 2. Create, build, and serve a new, basic Angular project:
 
 ```
-ng new hot-cakes
+ng new fast-start-angular-tasks
 
-cd hot-cakes
+cd fast-start-angular-tasks
 
 ng serve
 
@@ -161,21 +161,17 @@ lint-staged передаёт в вызываемую команду массив
 ```shell
 ng generate m modules/core
 ng generate m modules/courses
-ng generate m modules/login
-ng g c modules/login/components/login-page
 ```
 ## 7. Создайте компоненты header, footer, logo
 ```shell
 ng g c modules/core/components/header
 ng g c modules/core/components/footer
 ng g c modules/core/components/logo
-ng g c modules/core/components/breadcrumbs
-ng g c modules/core/components/section
 ```
 ## 8. Создайте страницу курсов. (Без имплементации)
 ```shell
-ng g c modules/courses/components/courses-list
-ng g c modules/courses/components/course-page
+ng g c modules/courses/components/courses
+ng g c modules/courses/components/course-item
 ```
 ## 9. Создайте интерфейсы курсов и пользователей.
 ```shell
@@ -200,17 +196,6 @@ export interface User {
   lastName: string;
 }
 ```
-## 10. Компоновка модулей.
-
-```shell
-ng generate m modules/layout
-ng g c modules/layout/components/layout-entry-pc
-ng g c modules/layout/components/layout-site-pc
-ng g c modules/layout/components/layout-entry-app
-ng g c modules/layout/components/layout-site-app
-
-ng g c modules/courses/components/course-item
-```
 ___
 
 #### Источники:
@@ -221,6 +206,5 @@ ___
 
 [https://angular.io/tutorial/first-app/first-app-lesson-04](https://angular.io/tutorial/first-app/first-app-lesson-04)
 
-layout:
 
 
