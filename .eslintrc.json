@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        // Стайл гайд AirBnB
+        "airbnb-base", // Добавлено вручную для Definition for rule 'import/extensions' was not found
+        "airbnb-typescript/base",
+        // Настройки для Prettier
+        "prettier",
+        // "prettier/@typescript-eslint", // Устарела - вместог нее "prettier"
+        "plugin:prettier/recommended"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+      },
+      "rules": {
+        // Добавлено вручную для одиночных экспортов
+        "import/prefer-default-export": "off",
+        // Добавлено вручную для вывода на консоль - Unexpected console statement
+        "no-console": 0,
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {}
+    }
+  ]
+}
