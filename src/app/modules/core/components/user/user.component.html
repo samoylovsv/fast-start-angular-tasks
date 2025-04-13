@@ -1,0 +1,17 @@
+<div class="flex">
+  <div class="flex justify-content-start align-items-center">
+    <span class="px-1 pi pi-user"></span>
+    <span class="px-2">{{ userName }}</span>
+  </div>
+  <div class="flex justify-content-end align-items-center">
+    <p-button
+      [label]="exitLabel"
+      icon="pi pi-user"
+    />
+    <button pButton pRipple severity="success">
+      <WindowMaximizeIcon pButtonIcon />
+      <span pButtonLabel>label</span>
+    </button>
+    <p-button label="Link" [link]="true" />
+  </div>
+</div>

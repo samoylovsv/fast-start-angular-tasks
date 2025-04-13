@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeflex/primeflex.css';
+@import 'primeflex/themes/saga-blue.css';
+@import "primeicons/primeicons.css";
+
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#main-container {
+  display: flex; /* displays flex-items (children) inline */
+  flex-direction: column; /* stacks them vertically */
+  height: 100%; /* needs to take the parents height, alternative: body {display: flex} */
+}
+
+main {
+  flex: 1; /* takes the remaining height of the "container" div */
+  overflow: auto; /* to scroll just the "main" div */
+}
